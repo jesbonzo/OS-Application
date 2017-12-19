@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Introduction</title>
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block"><br><br>
+           
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='index.html'">Overview</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='processsched.html'">Process Scheduling</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='def.html'">Scheduling Algorithm Definitions</div>
+        
+            <div class="buttons-col">
+           <h2 text align="center">Scheduling Algorithms</h2>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='fcfs.html'">FCFS</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='sjf.html'">SJF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='srtf.html'">SRTF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='rr.html'">RR</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='psa.html'">PSA</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='ppsa.html'">PPSA</div>
+          <div class="button button-raised button-fill color-red" style="margin-top: 5px"onclick="window.location.href='about.html'">About the App</div>
+    
+        </div> 
+        </div>
+    </div>
+
+   <div class="views">
+       <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                   <div class="center sliding"><small>Introduction</small></div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="index" class="page">
+                     <div class="page-content">
+                        <div class="content-block">
+                            <h1>Operating System - Overview</h1>
+                         
+                            <p>An Operating System (OS) is an interface between a computer user and computer hardware. An operating system is a software which performs all the basic tasks like file management, memory management, process management, handling input and output, and controlling peripheral devices such as disk drives and printers.</p>
+                            <p>Some popular Operating Systems include Linux, Windows, OS X, VMS, OS/400, AIX, z/OS, etc.</p>
+
+                            <h3>Definition</h3>
+
+                            <p>An operating system is a program that acts as an interface between the user and the computer hardware and controls the execution of all kinds of programs.</p>
+
+                            <center><img src="img/chart1.jpg"></center>
+
+                            <p><b>Following are some of important functions of an operating System:</b></p>
+
+                            <ul>
+                              <li>Memory Management</li>
+                              <li>Processor Management</li>
+                              <li>Device Management</li>
+                              <li>File Management</li>
+                              <li>Security</li>
+                              <li>Control over system performance</li>
+                              <li>Job accounting</li>
+                              <li>Error detecting aids</li>
+                              <li>Coordination between other software and users</li>
+                           </ul>
+
+                           <h2>Memory Management</h2>
+                           <p>Memory management refers to management of Primary Memory or Main Memory. Main memory is a large array of words or bytes where each word or byte has its own address.</p>
+                           <p>Main memory provides a fast storage that can be accessed directly by the CPU. For a program to be executed, it must in the main memory. An Operating System does the following activities for memory management −</p>
+
+                           <ul>
+                             <li>Keeps tracks of primary memory, i.e., what part of it are in use by whom, what part are not in use.</li>
+                             <li>In multiprogramming, the OS decides which process will get memory when and how much.</li>
+                             <li>Allocates the memory when a process requests it to do so.</li>
+                             <li>De-allocates the memory when a process no longer needs it or has been terminated.</li>
+                           </ul>
+
+                            <h2>Processor Management</h2>
+                            <p>In multiprogramming environment, the OS decides which process gets the processor when and for how much time. This function is called <b>process scheduling.</b> An Operating System does the following activities for processor management −</p>
+
+                            <ul>
+                              <li>Keeps tracks of processor and status of process. The program responsible for this task is known as <b>traffic controller.</b></li>
+                              <li>Allocates the processor (CPU) to a process.</li>
+                              <li>De-allocates processor when a process is no longer required.</li>
+                            </ul>
+
+                            <h2>Device Management</h2>
+                            <p>An Operating System manages device communication via their respective drivers. It does the following activities for device management −</p>
+
+                            <ul>
+                              <li>Keeps tracks of all devices. Program responsible for this task is known as the <b>I/O controller.</b></li>
+                              <li>Decides which process gets the device when and for how much time.</li>
+                              <li>Allocates the device in the efficient way.</li>
+                              <li>De-allocates devices.</li>
+                            </ul>
+
+                            <h2>File Management</h2>
+                            <p>A file system is normally organized into directories for easy navigation and usage. These directories may contain files and other directions.</p>
+                            <p>An Operating System does the following activities for file management −</p>
+
+                            <ul>
+                              <li>Keeps track of information, location, uses, status etc. The collective facilities are often known as <b>file system.</b></li>
+                              <li>Decides who gets the resources.</li>
+                              <li>Allocates the resources.</li>
+                              <li>De-allocates the resources.</li>
+                            </ul>
+
+                            <h2>Other Important Activities</h2>
+                            <p>Following are some of the important activities that an Operating System performs −</p>
+
+                            <ul>
+                              <li><b>Security</b> − By means of password and similar other techniques, it prevents unauthorized access to programs and data.</li>
+                              <li><b>Control over system performance</b> − Recording delays between request for a service and response from the system.</li>
+                              <li><b>Job accounting</b> − Keeping track of time and resources used by various jobs and users.</li>
+                              <li><b>Error detecting aids</b> − Production of dumps, traces, error messages, and other debugging and error detecting aids.</li>
+                              <li><b>Coordination between other softwares and users</b> − Coordination and assignment of compilers, interpreters, assemblers and other software to the various users of the computer systems.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+   
+                     <button class="button button-raised button-fill color-green" href="index.html">Home</button>
+
+                    
+                    <button class="button button-raised button-fill color-yellow" onclick="goBack()">Back</button>
+                    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

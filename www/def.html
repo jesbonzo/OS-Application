@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Process Scheduling</title>
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block"><br><br>
+           
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='index.html'">Overview</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='processsched.html'">Process Scheduling</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='def.html'">Scheduling Algorithm Definitions</div>
+        
+             <div class="buttons-col">
+           <h2 text align="center">Scheduling Algorithms</h2>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='fcfs.html'">FCFS</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='sjf.html'">SJF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='srtf.html'">SRTF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='rr.html'">RR</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='psa.html'">PSA</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='ppsa.html'">PPSA</div>
+          <div class="button button-raised button-fill color-red" style="margin-top: 5px"onclick="window.location.href='about.html'">About the App</div>
+    
+        </div> 
+        </div>
+    </div>
+
+   <div class="views">
+       <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                   <div class="center sliding"><small>Scheduling Algorithm Definitions</small></div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="index" class="page">
+                     <div class="page-content">
+                        <div class="content-block">
+                            <h1>Some of the Definitions and Abbreviations used in the Scheduling Algorithm</h1>
+            
+                            <h3>Definitions:</h3>
+
+                            <p><b>Two Schemes:</b></p>
+                            <p><b>Non-Preemptive Scheduling</b> - once the CPU has been allocated to a process, <b>the process keeps the CPU until it releases the CPU either by terminating or by switching to the waiting state.</b></p>
+
+                            <p><b>Preemptive Scheduling</b> - the tasks are usually assigned with priorities. At times it is necessary to run a certain task that has a higher priority before another task although it is running. Therefore, <b>the running task is interrupted for some time and resumed later when the priority task has finished its execution.</b></p>
+
+
+                            <p><b>Scheduling Criteria:</b></p>
+                            <p><b>Central Processing Unit Utilization</b> - (CPU Utilization) <br>The percentage of time that the CPU is busy to keep the CPU as busy as possible.</p>
+                            <p>Formula: <br> CPU Utilization = total process BT / total CPU execution time of all process x 100%</p>
+
+                            <p><b>System Throughput - (ST)</b> <br>   Number of processes completed per time unit.</p>
+                            <p>Formula: <br> ST = number of processes / total CPU execution time of all process</p>
+
+                            <p><b>Turnaround time - (TAT)</b><br> Elapsed time from the time the process is submitted for execution to the time it is completed.</p> 
+                            <p>Formula:<br> TAT = end time - arrival time (original)<br> 
+                             ATAT = total turnaround time / total number of process</p>
+
+                            <p><b>Waiting time - (WT)</b><br>
+                             Amount of time a process has been waiting in the ready queue.</p>
+                             <p>Formula:<br>WT = TAT - BT<br> 
+                             AWT = total waiting time / total number of process</p>
+
+                             <p><b>Abbreviations:</b></p>
+                             <p><b>AT</b> - Arrival Time<br><b>BT</b> - Burst Time<br><b>CT</b> - Completion Time or <b>AT</b> - Arrival Time<br><b>AWT</b> - Average Waiting Time<br><b>ATAT</b> - Average Turnaround Time</p>
+
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="toolbar">
+                <div class="toolbar-inner">
+                 <button class="button button-raised button-fill color-green" onclick="location.href = 'index.html'">Home</button>
+                <button class="button button-raised button-fill color-yellow" onclick="goBack()">Back</button>
+                    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

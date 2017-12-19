@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>About</title>
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block"><br><br>
+           
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='index.html'">Overview</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='processsched.html'">Process Scheduling</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='def.html'">Scheduling Algorithm Definitions</div>
+        
+             <div class="buttons-col">
+           <h2 text align="center">Scheduling Algorithms</h2>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='fcfs.html'">FCFS</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='sjf.html'">SJF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='srtf.html'">SRTF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='rr.html'">RR</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='psa.html'">PSA</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='ppsa.html'">PPSA</div>
+          <div class="button button-raised button-fill color-red" style="margin-top: 5px"onclick="window.location.href='about.html'">About the App</div>
+    
+        </div> 
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><small>About the App</small></div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block">
+                 
+                <p>This Application is a Project Requirement in <b>IT 207 - Operating System.</b></p><br>
+
+                <h4>Developed By:</h4> <p><b>Jessica Joy B. Bonzo </b><br>III-BSIT-Irregular</p>
+               
+        
+               <h4>Credits:</h4>
+
+               <p><i>OS class handouts</i></p>
+               <p>Links to the contents used by this App:</p>
+
+               <a href="http://www.tutorialspoint.com/operating_system">Tutorials Point</a> <br>
+
+              <!--  <a href="http://www.youtube.com/watch?v=2i2N_Qo_FyM&list=PLEbnTDJUr_If_BnzJkkN_J0Tl3iXTL8vq">Gate Lectures by Ravindrababu Ravula </a><br>
+ -->
+               <a href="http://www.studytonight.com/operating-system/cpu-scheduling">Study tonight</a><br>
+
+               <a href="http://www.uobabylon.edu.iq/download/M.S%202013-2014/Operating_System_Concepts,_8th_Edition%5BA4%5D.pdf">Operating System Concepts, 8th Edition (PDF book)</a>
+                
+
+                            <!-- Link to another page -->
+                            <!-- <a href="about.html">About app</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                 <button class="button button-raised button-fill color-green" onclick="location.href = 'index.html'">Home</button>
+                <button class="button button-raised button-fill color-yellow" onclick="goBack()">Back</button>
+                    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

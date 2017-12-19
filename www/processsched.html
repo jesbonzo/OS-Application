@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Process Scheduling</title>
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block"><br><br>
+           
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='index.html'">Overview</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='processsched.html'">Process Scheduling</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='def.html'">Scheduling Algorithm Definitions</div>
+        
+             <div class="buttons-col">
+           <h2 text align="center">Scheduling Algorithms</h2>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='fcfs.html'">FCFS</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='sjf.html'">SJF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='srtf.html'">SRTF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='rr.html'">RR</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='psa.html'">PSA</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='ppsa.html'">PPSA</div>
+          <div class="button button-raised button-fill color-red" style="margin-top: 5px"onclick="window.location.href='about.html'">About the App</div>
+    
+        </div> 
+        </div>
+    </div>
+
+   <div class="views">
+       <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                   <div class="center sliding"><small>Process Scheduling</small></div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="index" class="page">
+                     <div class="page-content">
+                        <div class="content-block">
+                            <h1>Process Scheduling</h1>
+                            <h3>Definition</h3>
+
+                            <p>The process scheduling is the activity of the process manager that handles the removal of the running process from the CPU and the selection of another process on the basis of a particular strategy.</p>
+                            <p>Process scheduling is an essential part of a Multiprogramming operating systems. Such operating systems allow more than one process to be loaded into the executable memory at a time and the loaded process shares the CPU using time multiplexing.</p>
+
+                            <h2>Process Scheduling Queues</h2>
+                            <p>The OS maintains all PCBs in Process Scheduling Queues. The OS maintains a separate queue for each of the process states and PCBs of all processes in the same execution state are placed in the same queue. When the state of a process is changed, its PCB is unlinked from its current queue and moved to its new state queue.</p>
+                            <p>The Operating System maintains the following important process scheduling queues −</p>
+                          
+                            <ul>
+                              <li><b>Job queue</b> − This queue keeps all the processes in the system.</li>
+                              <li><b>Ready queue</b> − This queue keeps a set of all processes residing in main memory, ready and waiting to execute. A new process is always put in this queue.</li>
+                              <li><b>Device queues</b> − The processes which are blocked due to unavailability of an I/O device constitute this queue.</li>
+                            </ul>
+
+                            <center><img src="img/chart2.jpg"></center>
+                      
+                            <p>The OS can use different policies to manage each queue (FIFO, Round Robin, Priority, etc.). The OS scheduler determines how to move processes between the ready and run queues which can only have one entry per processor core on the system; in the above diagram, it has been merged with the CPU.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                 <button class="button button-raised button-fill color-green" onclick="location.href = 'index.html'">Home</button>
+                <button class="button button-raised button-fill color-yellow" onclick="goBack()">Back</button>
+                    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

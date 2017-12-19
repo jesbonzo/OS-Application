@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Scheduling Algorithms</title>
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block"><br><br>
+           
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='index.html'">Overview</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='processsched.html'">Process Scheduling</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='def.html'">Scheduling Algorithm Definitions</div>
+        
+            <div class="buttons-col">
+           <h2 text align="center">Scheduling Algorithms</h2>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='fcfs.html'">FCFS</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='sjf.html'">SJF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='srtf.html'">SRTF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='rr.html'">RR</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='psa.html'">PSA</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='ppsa.html'">PPSA</div>
+          <div class="button button-raised button-fill color-red" style="margin-top: 5px"onclick="window.location.href='about.html'">About the App</div>
+    
+        </div> 
+        </div>
+    </div>
+
+   <div class="views">
+       <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                   <div class="center sliding"><small>Scheduling Algorithm</small></div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="index" class="page">
+                     <div class="page-content">
+                        <div class="content-block">
+                           <h2>Shortest Job First (SJF)</h2> <h3>Non-Preemptive</h3>
+                           <ul>
+                             <li>Selects job with the shortest (expected) burst time first. Shorter jobs are always executed before long jobs.</li>
+                             <li>One major difficulty with SJF is the need to know or estimate time of each job.</li>
+                             <li>Another difficulty is long running times may starve beacuse the CPU has a steady supply of short jobs.</li>
+                             <li>But SJF is optimal - gives minimum WT for a given set of processes.</li></ul>
+
+
+                           <h3>Example</h3>
+
+                           <table align="center">
+  <colgroup span="3"></colgroup>
+  <tr>
+    <th>Process</th>
+    <th>AT</th>
+    <th>BT</th>
+    </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>7</td>
+    </tr>
+  <tr>
+    <td>2</td>
+    <td>2</td>
+    <td>4</td>
+     </tr>
+  <tr>
+    <td>3</td>
+    <td>4</td>
+    <td>1</td>
+     </tr>
+  <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>4</td>
+    </tr>
+ 
+</table><br> <h3>Solution:<br>Gantt chart:</h3>
+
+<table align="center">
+  <colgroup span="5"></colgroup>
+  <tr>
+    Process<th>1</th>
+    <th>3</th>
+    <th>2</th>
+    <th>4</th>
+    </tr>
+
+  </table><p align="center">0
+7
+8
+12
+16
+</p>
+
+                            <ul><li>CPU = 16/16 x 100 <br>= 100%</li>
+
+                            <li>ST = 4/16 </li> 
+
+                            <li>TAT = End Time - Arrival Time<br></li>
+                             <li>WT = Turnaround time - Burst Time<br></li>
+
+
+ <table align="center">
+  <colgroup span="3"></colgroup>
+  <tr>
+    <th>Process</th>
+    <th>TAT</th>
+    <th>WT</th>
+    </tr>
+  <tr>
+    <td>1</td>
+    <td>7 - 0 = 7</td>
+    <td>7 - 7 = 0</td>
+    </tr>
+  <tr>
+    <td>2</td>
+    <td>12 - 2 = 10</td>
+    <td>10 - 4 = 6</td>
+     </tr>
+  <tr>
+    <td>3</td>
+    <td>8 - 4 = 4</td>
+    <td>4 - 1 = 3</td>
+     </tr>
+  <tr>
+    <td>4</td>
+    <td>16 - 5 = 11</td>
+    <td>11 - 4 = 7</td>
+    </tr>
+  
+</table><ul>
+<li>ATAT = 7+10+4+11/4<br>= 32/4 <br>= 8 </li>
+<li>AWT = 0+6+3+7/4 <br>= 16/4 <br>= 4 </li>
+</ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="toolbar">
+                <div class="toolbar-inner">
+                 <button class="button button-raised button-fill color-green" onclick="location.href = 'index.html'">Home</button>
+                <button class="button button-raised button-fill color-yellow" onclick="goBack()">Back</button>
+                    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

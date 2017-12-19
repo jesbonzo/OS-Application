@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Scheduling Algorithms</title>
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block"><br><br>
+           
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='index.html'">Overview</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='processsched.html'">Process Scheduling</div>
+           <div class="button button-raised button-fill color-yellow" style="margin-top: 5px" onclick="window.location.href='def.html'">Scheduling Algorithm Definitions</div>
+        
+            <div class="buttons-col">
+           <h2 text align="center">Scheduling Algorithms</h2>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='fcfs.html'">FCFS</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='sjf.html'">SJF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='srtf.html'">SRTF</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px" onclick="window.location.href='rr.html'">RR</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='psa.html'">PSA</div>
+          <div class="button button-raised button-fill color-blue" style="margin-top: 5px"onclick="window.location.href='ppsa.html'">PPSA</div>
+          <div class="button button-raised button-fill color-red" style="margin-top: 5px"onclick="window.location.href='about.html'">About the App</div>
+    
+        </div> 
+        </div>
+    </div>
+
+   <div class="views">
+       <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                   <div class="center sliding"><small>Scheduling Algorithm</small></div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="index" class="page">
+                     <div class="page-content">
+                        <div class="content-block">
+                           <h2>Priority Scheduling Algorithm (PSA)</h2> <h3>Non-Preemptive</h3>
+                           <ul>
+                             <li>Priority scheduling is a non-preemptive algorithm and one of the most common scheduling algorithms in batch systems.</li>
+                             <li>Each process is assigned a priority. Process with highest priority is to be executed first and so on.</li>
+                             <li>Processes with same priority are executed on first come first served basis.</li>
+                             <li>Priority can be decided based on memory requirements, time requirements or any other resource requirement.</li></ul>
+
+
+                           <h3>Example</h3>
+
+                           <table align="center">
+  <colgroup span="3"></colgroup>
+  <tr>
+    <th>Process</th>
+    <th>AT</th>
+    <th>BT</th>
+    <td>PL</td>
+    </tr>
+  <tr>
+    <td>P1</td>
+    <td>1</td>
+    <td>4</td>
+    <td>1</td>
+    </tr>
+  <tr>
+    <td>P2</td>
+    <td>0</td>
+    <td>3</td>
+    <td>2</td>
+     </tr>
+  <tr>
+    <td>P3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>3</td>
+     </tr>
+  <tr>
+    <td>P4</td>
+    <td>6</td>
+    <td>6</td>
+    <td>4</td>
+    </tr>
+ 
+</table><br> <h3>Solution:<br>Gantt chart:</h3>Highest Priority Level (HPL) = 1
+
+<table align="center">
+  <colgroup span="5"></colgroup>
+  <tr>
+    Process
+    <th>P2</th>
+    <th>P1</th>
+    <th>P3</th>
+    <th>P4</th>
+    </tr>
+
+  </table><p align="center"> 0 3 7 12 18</p>
+
+                            <ul><li>CPU = 18/18 x 100 <br>= 100%</li>
+
+                            <li>ST = 4/18 </li> 
+
+                            <li>TAT = End Time - Arrival Time<br></li>
+                             <li>WT = Turnaround time - Burst Time<br></li>
+
+
+ <table align="center">
+  <colgroup span="3"></colgroup>
+  <tr>
+    <th>Process</th>
+    <th>TAT</th>
+    <th>WT</th>
+    </tr>
+  <tr>
+    <td>P1</td>
+    <td>7 - 1 = 6</td>
+    <td>6 - 4 = 2</td>
+    </tr>
+  <tr>
+    <td>P2</td>
+    <td>3 - 0 = 3</td>
+    <td>3 - 3 = 0</td>
+     </tr>
+  <tr>
+    <td>P3</td>
+    <td>12 - 4 = 8</td>
+    <td>8 - 5 = 3</td>
+     </tr>
+  <tr>
+    <td>P4</td>
+    <td>18 - 6 = 12</td>
+    <td>12 - 6 = 6</td>
+    </tr>
+  
+</table><ul>
+<li>ATAT = 6+3+8+12/4<br>= 29/4 <br>= 7.25 </li>
+<li>AWT = 2+0+3+6/4 <br>= 11/4 <br>= 2.75 </li>
+</ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="toolbar">
+                <div class="toolbar-inner">
+                 <button class="button button-raised button-fill color-green" onclick="location.href = 'index.html'">Home</button>
+                <button class="button button-raised button-fill color-yellow" onclick="goBack()">Back</button>
+                    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

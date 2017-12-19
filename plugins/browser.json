@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.jessica.bonzo"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.jessica.bonzo"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.jessica.bonzo"
+        }
+    },
+    "dependent_plugins": {}
+}
